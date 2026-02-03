@@ -19,4 +19,13 @@ RUN pip install jupyterlab
 
 EXPOSE 7860
 
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=7860", "--no-browser", "--allow-root"]
+CMD ["jupyter", "lab", \
+     "--ip=0.0.0.0", \
+     "--port=7860", \
+     "--no-browser", \
+     "--allow-root", \
+     "--NotebookApp.token=''", \
+     "--NotebookApp.password=''", \
+     "--NotebookApp.allow_origin='*'", \
+     "--NotebookApp.disable_check_xsrf=True"]
+
